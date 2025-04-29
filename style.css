@@ -1,29 +1,42 @@
-
 body {
   font-family: Arial, sans-serif;
-  background: #f9f9f9;
   margin: 0;
-  padding: 20px;
+  padding: 0;
+  background: #f8f8f8;
 }
-.container {
-  max-width: 600px;
+.app-container {
+  max-width: 700px;
   margin: auto;
-  background: #fff;
   padding: 20px;
-  border-radius: 8px;
-  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+  background: #fff;
 }
-h1, h2 {
+header {
   text-align: center;
+  padding: 10px 0;
 }
-input {
-  width: 100%;
-  padding: 10px;
-  margin: 10px 0;
+.summary p {
+  font-size: 1.1em;
+  margin: 8px 0;
+}
+.section-controls {
+  margin: 20px 0;
+}
+#new-section-name {
+  padding: 8px;
+  width: 70%;
+  margin-right: 5px;
 }
 button {
-  display: block;
-  margin: 10px auto;
-  padding: 10px 20px;
-  font-size: 16px;
+  padding: 8px 15px;
+  cursor: pointer;
+}
+.section-box {
+  border: 1px solid #ccc;
+  padding: 15px;
+  margin-top: 15px;
+  background: #fdfdfd;
+}
+.section-title {
+  font-weight: bold;
+  margin-bottom: 10px;
 }

@@ -1,24 +1,31 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>I Build My House</title>
-  <link rel="stylesheet" href="style.css"/>
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-  <div class="container">
-    <h1>I Build My House</h1>
-    <div id="budget-section">
-      <label>Total Budget (INR):</label>
-      <input type="number" id="totalBudget" placeholder="Enter total budget"/>
-    </div>
-    <div id="sections">
-      <h2>Sections</h2>
-      <ul id="sectionList"></ul>
-      <button onclick="addSection()">Add Section</button>
-    </div>
+  <div class="app-container">
+    <header>
+      <h1>I Build My House</h1>
+    </header>
+    <main>
+      <div class="summary">
+        <p><strong>Total Budget:</strong> ₹<span id="total-budget">0</span></p>
+        <p><strong>Total Expenses:</strong> ₹<span id="total-expenses">0</span></p>
+        <p><strong>Remaining:</strong> ₹<span id="remaining-budget">0</span></p>
+      </div>
+      <div class="section-controls">
+        <input type="text" id="new-section-name" placeholder="Section name" />
+        <button onclick="addSection()">Add Section</button>
+      </div>
+      <div id="sections-container"></div>
+    </main>
+    <footer>
+      <p>App data saved locally.</p>
+    </footer>
   </div>
   <script src="app.js"></script>
 </body>
