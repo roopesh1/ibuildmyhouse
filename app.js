@@ -1,6 +1,3 @@
-let sections = JSON.parse(localStorage.getItem("sections") || "[]");
-let totalBudget = parseFloat(localStorage.getItem("totalBudget") || "0");
-
 document.addEventListener("DOMContentLoaded", function () {
   const totalBudgetInput = document.getElementById("totalBudget");
   const totalExpensesEl = document.getElementById("totalExpenses");
@@ -10,7 +7,8 @@ document.addEventListener("DOMContentLoaded", function () {
   const addSectionBtn = document.getElementById("addSectionBtn");
   const sectionsContainer = document.getElementById("sectionsContainer");
 
-  totalBudgetInput.value = totalBudget;
+  let sections = JSON.parse(localStorage.getItem("sections") || "[]");
+  let totalBudget = parseFloat(localStorage.getItem("totalBudget") || "0");
 
   function saveData() {
     localStorage.setItem("sections", JSON.stringify(sections));
@@ -55,7 +53,6 @@ document.addEventListener("DOMContentLoaded", function () {
     const budget = parseFloat(sectionBudgetInput.value);
     if (!name || isNaN(budget)) return alert("Enter valid section details.");
     const newSection = {
-      id: Date.now(),
       name,
       budget,
       expenses: 0,
@@ -78,6 +75,7 @@ document.addEventListener("DOMContentLoaded", function () {
     document.body.classList.toggle("dark");
   });
 
+  totalBudgetInput.value = totalBudget;
   renderSections();
   updateSummary();
 });
